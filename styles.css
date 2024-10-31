@@ -1,11 +1,7 @@
-* {
-  box-sizing: border-box;
+body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-}
-
-body {
+  font-family: "Montserrat", sans-serif;
   background-color: #f2f7fa;
   color: #333;
   padding: 20px;
@@ -82,9 +78,8 @@ button:hover {
   border: none;
   border-radius: 5px;
   font-size: 1rem;
-  cursor: not-allowed;
   flex-grow: 1;
-  margin: 0 5px; /* Menambahkan jarak antar tombol */
+  margin: 0 5px;
 }
 
 .history-chart button:hover {
