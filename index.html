@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthWell</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>HealthWell</h1>
+    <p>Your Daily Health Tracker</p>
+  </header>
+
+  <section id="tracker">
+    <h2>Daily Tracker</h2>
+    <div class="tracker-item">
+      <label for="sleep">Sleep Hours:</label>
+      <input type="number" id="sleep" placeholder="Hours">
+    </div>
+    <div class="tracker-item">
+      <label for="water">Water Intake:</label>
+      <input type="number" id="water" placeholder="Glasses">
+      <button onclick="alert('Don’t forget to drink water!')">Set Reminder</button>
+    </div>
+  </section>
+
+  <section id="health-history">
+    <h2>Health History & Report</h2>
+    <p>See your progress over time.</p>
+    <div class="history-chart">
+      <div class="chart-bar" style="height: 70%;">Activity</div>
+      <div class="chart-bar" style="height: 50%;">Sleep</div>
+      <div class="chart-bar" style="height: 80%;">Hydration</div>
+    </div>
+  </section>
+
+  <section id="health-notes">
+    <h2>Health Notes</h2>
+    <textarea placeholder="Write your mood or physical condition here..."></textarea>
+  </section>
+
+  <section id="health-tips">
+    <h2>Daily Health Tips</h2>
+    <ul>
+      <li>Stay hydrated throughout the day.</li>
+      <li>Get at least 7 hours of sleep each night.</li>
+      <li>Take breaks to stretch if sitting for long periods.</li>
+    </ul>
+  </section>
