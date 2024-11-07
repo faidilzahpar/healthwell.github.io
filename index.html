@@ -1,62 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HealthWell</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>HealthWell</h1>
-      <p>Your Daily Health Tracker</p>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HealthWell</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-light">
+  <header class="text-center py-5 bg-primary text-white">
+    <h1>HealthWell</h1>
+    <p>Your Daily Health Tracker</p>
+  </header>
 
-    <section id="tracker">
-      <h2>Daily Tracker</h2>
-      <div class="tracker-item">
-        <label for="bedtime-hour">Pengingat Tidur:</label>
-        <input type="number" id="bedtime-hour" placeholder="Hour" min="0" max="23" />
-        <input type="number" id="bedtime-minute" placeholder="Minute" min="0" max="59" />
-        <button>Set Bedtime Reminder</button>
-      </div>
-      <div class="tracker-item">
-        <label for="water-goal">Target Minum (gelas):</label>
-        <input type="number" id="water-goal" placeholder="Set Goal" min="1" />
-      </div>
-      <div class="tracker-item">
-        <label for="water-drank">Yang sudah diminum (gelas):</label>
-        <input type="number" id="water-drank" placeholder="Glasses Drank" min="0" />
-        <button>Update Water Intake</button>
+  <div class="container my-5">
+    <!-- Daily Tracker Section -->
+    <section id="tracker" class="mb-5 shadow p-5 rounded">
+      <h2 class="text-center mb-4">Daily Tracker</h2>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="bedtime-hour" class="form-label">Pengingat Tidur:</label>
+          <div class="input-group">
+            <input type="time" id="bedtime-hour" class="form-control"/>
+            <button class="btn btn-primary">Set Bedtime Reminder</button>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3"></div>
+        
+        <div class="col-md-6 mb-3">
+          <label for="water-drank" class="form-label">Yang Sudah Diminum (gelas):</label>
+          <div class="input-group">
+            <input type="number" id="water-drank" class="form-control" placeholder="Glasses Drank" min="0" />
+            <button class="btn btn-primary">Update Water Intake</button>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="water-goal" class="form-label">Target Minum (gelas):</label>
+          <input type="number" id="water-goal" class="form-control" placeholder="Set Goal" min="1" />
+        </div>
       </div>
     </section>
 
-    <section id="health-history">
+    <!-- Health History Section -->
+    <section id="health-history" class="mb-5 text-center shadow p-5 rounded">
       <h2>Health History & Report</h2>
       <p>Lihat progress kamu.</p>
-      <div class="history-chart">
-        <button>Activity</button>
-        <button>Sleep</button>
-        <button>Hydration</button>
+      <div class="d-flex justify-content-center gap-4 mt-3">
+        <button class="btn btn-outline-primary">Activity</button>
+        <button class="btn btn-outline-primary">Sleep</button>
+        <button class="btn btn-outline-primary">Hydration</button>
       </div>
     </section>
 
-    <section id="health-notes">
-      <h2>Health Notes</h2>
-      <textarea placeholder="Catat mood atau kondisi fisik harian kamu disini..."></textarea>
+    <!-- Health Notes Section -->
+    <section id="health-notes" class="mb-5 shadow p-5 rounded">
+      <h2 class="text-center">Health Notes</h2>
+      <div class="mb-3 d-flex flex-column">
+        <textarea class="form-control" rows="5" placeholder="Catat mood atau kondisi fisik harian kamu disini..."></textarea>
+        <div class="text-end mt-3">
+          <button class="btn btn-primary" id="save-note">Simpan Catatan</button>
+        </div>
+      </div>
     </section>
 
-    <section id="health-tips">
-      <h2>Healty Tips</h2>
-      <ul>
-        <li>Minum air putih secara teratur sepanjang hari.</li>
-        <li>Usahakan tidur setidaknya 7 jam setiap malam.</li>
-        <li>Ambil jeda untuk peregangan jika duduk terlalu lama.</li>
+    <!-- Health Tips Section -->
+    <section id="health-tips" class="mb-5 shadow p-5 rounded">
+      <h2 class="text-center">Health Tips</h2>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Minum air putih secara teratur sepanjang hari.</li>
+        <li class="list-group-item">Usahakan tidur setidaknya 7 jam setiap malam.</li>
+        <li class="list-group-item">Ambil jeda untuk peregangan jika duduk terlalu lama.</li>
       </ul>
     </section>
+  </div>
 
-    <footer>
-      <p>HealthWell &copy; 2024</p>
-    </footer>
-  </body>
+  <footer class="text-center py-3 bg-primary text-white">
+    <p>HealthWell &copy; 2024</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
